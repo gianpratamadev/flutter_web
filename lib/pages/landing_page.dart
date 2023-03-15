@@ -11,7 +11,6 @@ class LandingPage extends StatefulWidget {
 class _LandingPageState extends State<LandingPage> {
   int selectedIndex = 0;
 
-  @override
   Widget navItem({required String nama, required int index}) {
     return InkWell(
       onTap: () {
@@ -28,7 +27,7 @@ class _LandingPageState extends State<LandingPage> {
               fontSize: 18,
               fontWeight:
                   index == selectedIndex ? FontWeight.w500 : FontWeight.w300,
-              color: Color(0xFF1D1E3C),
+              color: const Color(0xFF1D1E3C),
             ),
           ),
           Container(
@@ -37,7 +36,7 @@ class _LandingPageState extends State<LandingPage> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: index == selectedIndex
-                  ? Color(0XFFFE998D)
+                  ? const Color(0XFFFE998D)
                   : Colors.transparent,
             ),
           ),
@@ -75,11 +74,11 @@ class _LandingPageState extends State<LandingPage> {
                       Row(
                         children: [
                           navItem(nama: 'Guides', index: 0),
-                          SizedBox(width: 50),
+                          const SizedBox(width: 50),
                           navItem(nama: 'Pricing', index: 1),
-                          SizedBox(width: 50),
+                          const SizedBox(width: 50),
                           navItem(nama: 'Team', index: 2),
-                          SizedBox(width: 50),
+                          const SizedBox(width: 50),
                           navItem(nama: 'Stories', index: 3),
                         ],
                       ),
@@ -92,12 +91,12 @@ class _LandingPageState extends State<LandingPage> {
                   ),
 
                   // NOTE: CONTENT
-                  SizedBox(height: 76),
+                  const SizedBox(height: 76),
                   Image.asset(
                     'assets/illustration.png',
                     height: 450,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 84,
                   ),
                   Row(
@@ -108,7 +107,7 @@ class _LandingPageState extends State<LandingPage> {
                         width: 24,
                         height: 24,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 14,
                       ),
                       Text(
@@ -117,7 +116,7 @@ class _LandingPageState extends State<LandingPage> {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 500,
                   )
                 ],
